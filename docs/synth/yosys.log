@@ -1,0 +1,1317 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+post (git sha1 22c15a7ecd53437f18f67c72572bd693f78357ca, GNU /usr/bin/g++ 16.1.1)
+
+-- Running command `read_verilog rtl/spi_master.v; synth_ice40 -top spi_master -json build/spi_master.json; stat' --
+
+1. Executing Verilog-2005 frontend: rtl/spi_master.v
+Parsing Verilog input from `rtl/spi_master.v' to AST representation.
+Generating RTLIL representation for module `\spi_master'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH_ICE40 pass.
+
+2.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/cells_sim.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\SB_IO'.
+Generating RTLIL representation for module `\SB_GB_IO'.
+Generating RTLIL representation for module `\SB_GB'.
+Generating RTLIL representation for module `\SB_LUT4'.
+Generating RTLIL representation for module `\SB_CARRY'.
+Generating RTLIL representation for module `\SB_DFF'.
+Generating RTLIL representation for module `\SB_DFFE'.
+Generating RTLIL representation for module `\SB_DFFSR'.
+Generating RTLIL representation for module `\SB_DFFR'.
+Generating RTLIL representation for module `\SB_DFFSS'.
+Generating RTLIL representation for module `\SB_DFFS'.
+Generating RTLIL representation for module `\SB_DFFESR'.
+Generating RTLIL representation for module `\SB_DFFER'.
+Generating RTLIL representation for module `\SB_DFFESS'.
+Generating RTLIL representation for module `\SB_DFFES'.
+Generating RTLIL representation for module `\SB_DFFN'.
+Generating RTLIL representation for module `\SB_DFFNE'.
+Generating RTLIL representation for module `\SB_DFFNSR'.
+Generating RTLIL representation for module `\SB_DFFNR'.
+Generating RTLIL representation for module `\SB_DFFNSS'.
+Generating RTLIL representation for module `\SB_DFFNS'.
+Generating RTLIL representation for module `\SB_DFFNESR'.
+Generating RTLIL representation for module `\SB_DFFNER'.
+Generating RTLIL representation for module `\SB_DFFNESS'.
+Generating RTLIL representation for module `\SB_DFFNES'.
+Generating RTLIL representation for module `\SB_RAM40_4K'.
+Generating RTLIL representation for module `\SB_RAM40_4KNR'.
+Generating RTLIL representation for module `\SB_RAM40_4KNW'.
+Generating RTLIL representation for module `\SB_RAM40_4KNRNW'.
+Generating RTLIL representation for module `\ICESTORM_LC'.
+Generating RTLIL representation for module `\SB_PLL40_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2F_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_2F_PAD'.
+Generating RTLIL representation for module `\SB_WARMBOOT'.
+Generating RTLIL representation for module `\SB_SPRAM256KA'.
+Generating RTLIL representation for module `\SB_HFOSC'.
+Generating RTLIL representation for module `\SB_LFOSC'.
+Generating RTLIL representation for module `\SB_RGBA_DRV'.
+Generating RTLIL representation for module `\SB_LED_DRV_CUR'.
+Generating RTLIL representation for module `\SB_RGB_DRV'.
+Generating RTLIL representation for module `\SB_I2C'.
+Generating RTLIL representation for module `\SB_SPI'.
+Generating RTLIL representation for module `\SB_LEDDA_IP'.
+Generating RTLIL representation for module `\SB_FILTER_50NS'.
+Generating RTLIL representation for module `\SB_IO_I3C'.
+Generating RTLIL representation for module `\SB_IO_OD'.
+Generating RTLIL representation for module `\SB_MAC16'.
+Generating RTLIL representation for module `\ICESTORM_RAM'.
+Successfully finished Verilog frontend.
+
+2.2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \spi_master
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \spi_master
+Removed 0 unused modules.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$rtl/spi_master.v:103$14 in module spi_master.
+Removed 1 dead cases from process $proc$rtl/spi_master.v:80$10 in module spi_master.
+Marked 4 switch rules as full_case in process $proc$rtl/spi_master.v:80$10 in module spi_master.
+Marked 1 switch rules as full_case in process $proc$rtl/spi_master.v:70$8 in module spi_master.
+Marked 3 switch rules as full_case in process $proc$rtl/spi_master.v:56$2 in module spi_master.
+Removed a total of 1 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 1 assignment to connection.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~14 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\spi_master.$proc$rtl/spi_master.v:103$14'.
+     1/6: $0\bit_cnt[3:0]
+     2/6: $0\rx_shift[7:0]
+     3/6: $0\tx_shift[7:0]
+     4/6: $0\ss_n[0:0]
+     5/6: $0\mosi[0:0]
+     6/6: $0\sck[0:0]
+Creating decoders for process `\spi_master.$proc$rtl/spi_master.v:80$10'.
+     1/4: $4\next_state[1:0]
+     2/4: $3\next_state[1:0]
+     3/4: $2\next_state[1:0]
+     4/4: $1\next_state[1:0]
+Creating decoders for process `\spi_master.$proc$rtl/spi_master.v:70$8'.
+     1/1: $0\state[1:0]
+Creating decoders for process `\spi_master.$proc$rtl/spi_master.v:56$2'.
+     1/1: $0\div_cnt[2:0]
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\spi_master.\next_state' from process `\spi_master.$proc$rtl/spi_master.v:80$10'.
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\spi_master.\sck' using process `\spi_master.$proc$rtl/spi_master.v:103$14'.
+  created $dff cell `$procdff$512' with positive edge clock.
+Creating register for signal `\spi_master.\mosi' using process `\spi_master.$proc$rtl/spi_master.v:103$14'.
+  created $dff cell `$procdff$513' with positive edge clock.
+Creating register for signal `\spi_master.\ss_n' using process `\spi_master.$proc$rtl/spi_master.v:103$14'.
+  created $dff cell `$procdff$514' with positive edge clock.
+Creating register for signal `\spi_master.\tx_shift' using process `\spi_master.$proc$rtl/spi_master.v:103$14'.
+  created $dff cell `$procdff$515' with positive edge clock.
+Creating register for signal `\spi_master.\rx_shift' using process `\spi_master.$proc$rtl/spi_master.v:103$14'.
+  created $dff cell `$procdff$516' with positive edge clock.
+Creating register for signal `\spi_master.\bit_cnt' using process `\spi_master.$proc$rtl/spi_master.v:103$14'.
+  created $dff cell `$procdff$517' with positive edge clock.
+Creating register for signal `\spi_master.\state' using process `\spi_master.$proc$rtl/spi_master.v:70$8'.
+  created $dff cell `$procdff$518' with positive edge clock.
+Creating register for signal `\spi_master.\div_cnt' using process `\spi_master.$proc$rtl/spi_master.v:56$2'.
+  created $dff cell `$procdff$519' with positive edge clock.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 6 empty switches in `\spi_master.$proc$rtl/spi_master.v:103$14'.
+Removing empty process `spi_master.$proc$rtl/spi_master.v:103$14'.
+Found and cleaned up 4 empty switches in `\spi_master.$proc$rtl/spi_master.v:80$10'.
+Removing empty process `spi_master.$proc$rtl/spi_master.v:80$10'.
+Found and cleaned up 1 empty switch in `\spi_master.$proc$rtl/spi_master.v:70$8'.
+Removing empty process `spi_master.$proc$rtl/spi_master.v:70$8'.
+Found and cleaned up 3 empty switches in `\spi_master.$proc$rtl/spi_master.v:56$2'.
+Removing empty process `spi_master.$proc$rtl/spi_master.v:56$2'.
+Cleaned up 14 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+<suppressed ~22 debug messages>
+
+2.4. Executing CHECK pass (checking for obvious problems).
+Checking module spi_master...
+Found and reported 0 problems.
+
+2.5. Executing FLATTEN pass (flatten design).
+
+2.6. Executing TRIBUF pass.
+
+2.7. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 4 unused cells and 48 unused wires.
+<suppressed ~5 debug messages>
+
+2.10. Executing CHECK pass (checking for obvious problems).
+Checking module spi_master...
+Found and reported 0 problems.
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 75 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Computing hashes of 57 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+<suppressed ~54 debug messages>
+Removed a total of 18 cells.
+
+2.11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$478.
+    dead port 2/2 on $mux $procmux$493.
+    dead port 2/2 on $mux $procmux$485.
+Removed 3 multiplexer ports.
+<suppressed ~44 debug messages>
+
+2.11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+    New ctrl vector for $pmux cell $procmux$441: { $auto$opt_reduce.cc:137:opt_pmux$521 $procmux$498_CMP }
+  Optimizing cells in module \spi_master.
+Performed a total of 1 changes.
+
+2.11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 55 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 0 unused cells and 21 unused wires.
+<suppressed ~1 debug messages>
+
+2.11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~41 debug messages>
+
+2.11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+2.11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 55 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.11.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.12. Executing FSM pass (extract and optimize FSM).
+
+2.12.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking spi_master.state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+
+2.12.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.12.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.12.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.12.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.12.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.12.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.12.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.13. Executing OPT pass (performing simple optimizations).
+
+2.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 55 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~41 debug messages>
+
+2.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+2.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 55 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$518 ($dff) from module spi_master (D = \next_state, Q = \state, rval = 2'00).
+Adding EN signal on $auto$ff.cc:337:slice$522 ($sdff) from module spi_master (D = \next_state, Q = \state).
+Adding SRST signal on $procdff$513 ($dff) from module spi_master (D = $procmux$456_Y, Q = \mosi, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$532 ($sdff) from module spi_master (D = $procmux$456_Y, Q = \mosi).
+Adding SRST signal on $procdff$517 ($dff) from module spi_master (D = $procmux$408_Y, Q = \bit_cnt, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:337:slice$544 ($sdff) from module spi_master (D = $procmux$408_Y, Q = \bit_cnt).
+Adding SRST signal on $procdff$516 ($dff) from module spi_master (D = $procmux$420_Y, Q = \rx_shift, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$554 ($sdff) from module spi_master (D = { \rx_shift [6:0] \miso }, Q = \rx_shift).
+Adding SRST signal on $procdff$515 ($dff) from module spi_master (D = $procmux$433_Y, Q = \tx_shift, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$560 ($sdff) from module spi_master (D = $procmux$433_Y, Q = \tx_shift).
+Adding SRST signal on $procdff$519 ($dff) from module spi_master (D = $add$rtl/spi_master.v:64$7_Y, Q = \div_cnt, rval = 3'000).
+Adding SRST signal on $procdff$514 ($dff) from module spi_master (D = $procmux$441_Y, Q = \ss_n, rval = 1'1).
+Adding EN signal on $auto$ff.cc:337:slice$579 ($sdff) from module spi_master (D = $procmux$441_Y, Q = \ss_n).
+Adding SRST signal on $procdff$512 ($dff) from module spi_master (D = $procmux$468_Y, Q = \sck, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$583 ($sdff) from module spi_master (D = $procmux$468_Y, Q = \sck).
+
+2.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 13 unused cells and 13 unused wires.
+<suppressed ~14 debug messages>
+
+2.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+<suppressed ~5 debug messages>
+
+2.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~26 debug messages>
+
+2.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+2.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 69 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Computing hashes of 61 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+<suppressed ~24 debug messages>
+Removed a total of 8 cells.
+
+2.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+2.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.13.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.13.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~26 debug messages>
+
+2.13.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+2.13.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 61 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.13.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.13.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.13.23. Finished fast OPT passes. (There is nothing left to do.)
+
+2.14. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 3) from port B of cell spi_master.$eq$rtl/spi_master.v:54$1 ($eq).
+Removed top 1 bits (of 2) from port B of cell spi_master.$procmux$498_CMP0 ($eq).
+
+2.15. Executing PEEPOPT pass (run peephole optimizers).
+
+2.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.17. Executing SHARE pass (SAT-based resource sharing).
+
+2.18. Executing TECHMAP pass (map to technology primitives).
+
+2.18.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/usr/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.18.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+2.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.20. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.21. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module spi_master:
+  creating $macc model for $add$rtl/spi_master.v:132$17 ($add).
+  creating $macc model for $add$rtl/spi_master.v:64$7 ($add).
+  creating $alu model for $macc $add$rtl/spi_master.v:64$7.
+  creating $alu model for $macc $add$rtl/spi_master.v:132$17.
+  creating $alu cell for $add$rtl/spi_master.v:132$17: $auto$alumacc.cc:512:replace_alu$592
+  creating $alu cell for $add$rtl/spi_master.v:64$7: $auto$alumacc.cc:512:replace_alu$595
+  created 2 $alu and 0 $macc cells.
+
+2.22. Executing OPT pass (performing simple optimizations).
+
+2.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 61 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.22.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~26 debug messages>
+
+2.22.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+2.22.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 61 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.22.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.22.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.22.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.22.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.23. Executing MEMORY pass.
+
+2.23.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.23.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.23.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.23.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.23.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.23.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.23.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.23.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.23.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.23.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.25. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+2.26. Executing TECHMAP pass (map to technology primitives).
+
+2.26.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/brams_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/brams_map.v' to AST representation.
+Generating RTLIL representation for module `$__ICE40_RAM4K_'.
+Successfully finished Verilog frontend.
+
+2.26.2. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/spram_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/spram_map.v' to AST representation.
+Generating RTLIL representation for module `$__ICE40_SPRAM_'.
+Successfully finished Verilog frontend.
+
+2.26.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.27. Executing ICE40_BRAMINIT pass.
+
+2.28. Executing OPT pass (performing simple optimizations).
+
+2.28.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+<suppressed ~19 debug messages>
+
+2.28.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 48 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.28.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 0 unused cells and 13 unused wires.
+<suppressed ~1 debug messages>
+
+2.28.5. Finished fast OPT passes.
+
+2.29. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.30. Executing OPT pass (performing simple optimizations).
+
+2.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 48 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+2.30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+2.30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 48 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.30.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.31. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+2.32. Executing TECHMAP pass (map to technology primitives).
+
+2.32.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.32.2. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/arith_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ice40_alu'.
+Successfully finished Verilog frontend.
+
+2.32.3. Continuing TECHMAP pass.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_80_ice40_alu for cells of type $alu.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~173 debug messages>
+
+2.33. Executing OPT pass (performing simple optimizations).
+
+2.33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+<suppressed ~77 debug messages>
+
+2.33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 124 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Computing hashes of 109 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Computing hashes of 108 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Computing hashes of 107 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+<suppressed ~51 debug messages>
+Removed a total of 17 cells.
+
+2.33.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 4 unused cells and 99 unused wires.
+<suppressed ~5 debug messages>
+
+2.33.5. Finished fast OPT passes.
+
+2.34. Executing ICE40_OPT pass (performing simple optimizations).
+
+2.34.1. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) spi_master.$auto$alumacc.cc:512:replace_alu$592.slice[0].carry: CO=\bit_cnt [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) spi_master.$auto$alumacc.cc:512:replace_alu$595.slice[0].carry: CO=\div_cnt [0]
+
+2.34.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.34.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 103 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.34.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.34.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.34.6. Rerunning OPT passes. (Removed registers in this run.)
+
+2.34.7. Running ICE40 specific optimizations.
+
+2.34.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.34.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 103 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.34.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.34.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.34.12. Finished OPT passes. (There is nothing left to do.)
+
+2.35. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+2.36. Executing TECHMAP pass (map to technology primitives).
+
+2.36.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+2.36.2. Continuing TECHMAP pass.
+Using template $_SDFFCE_PP0P_ for cells of type $_SDFFCE_PP0P_.
+Using template $_SDFF_PP0_ for cells of type $_SDFF_PP0_.
+Using template $_SDFFCE_PP1P_ for cells of type $_SDFFCE_PP1P_.
+No more expansions possible.
+<suppressed ~50 debug messages>
+
+2.37. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.38. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping spi_master.$auto$alumacc.cc:512:replace_alu$592.slice[0].carry ($lut).
+Mapping spi_master.$auto$alumacc.cc:512:replace_alu$595.slice[0].carry ($lut).
+
+2.39. Executing ICE40_OPT pass (performing simple optimizations).
+
+2.39.1. Running ICE40 specific optimizations.
+
+2.39.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+<suppressed ~30 debug messages>
+
+2.39.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 153 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Computing hashes of 109 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+<suppressed ~132 debug messages>
+Removed a total of 44 cells.
+
+2.39.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.39.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 0 unused cells and 216 unused wires.
+<suppressed ~1 debug messages>
+
+2.39.6. Rerunning OPT passes. (Removed registers in this run.)
+
+2.39.7. Running ICE40 specific optimizations.
+
+2.39.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.39.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 109 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.39.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.39.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.39.12. Finished OPT passes. (There is nothing left to do.)
+
+2.40. Executing CHECK pass (checking for obvious problems).
+Checking module spi_master...
+Found and reported 0 problems.
+
+2.41. Executing TECHMAP pass (map to technology primitives).
+
+2.41.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/latches_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/latches_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+2.41.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.42. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/abc9_model.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ICE40_CARRY_WRAPPER'.
+Successfully finished Verilog frontend.
+
+2.43. Executing ABC9 pass.
+
+2.43.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.43.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.43.3. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module spi_master.
+Found 0 SCCs.
+
+2.43.4. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.43.5. Executing TECHMAP pass (map to technology primitives).
+
+2.43.5.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.43.5.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~130 debug messages>
+
+2.43.6. Executing OPT pass (performing simple optimizations).
+
+2.43.6.1. Executing OPT_EXPR pass (perform const folding).
+
+2.43.6.2. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+2.43.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Removed 0 multiplexer ports.
+
+2.43.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Performed a total of 0 changes.
+
+2.43.6.5. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+2.43.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.43.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+
+2.43.6.8. Executing OPT_EXPR pass (perform const folding).
+
+2.43.6.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.43.7. Executing TECHMAP pass (map to technology primitives).
+
+2.43.7.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/abc9_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+2.43.7.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~2 debug messages>
+
+2.43.8. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/abc9_model.v
+Parsing Verilog input from `/usr/bin/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+2.43.9. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~58 debug messages>
+
+2.43.10. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.43.11. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+2.43.12. Executing TECHMAP pass (map to technology primitives).
+
+2.43.12.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.43.12.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+Using template $paramod\SB_LUT4\LUT_INIT=16'0110100110010110 for cells of type SB_LUT4.
+Using template SB_CARRY for cells of type SB_CARRY.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+No more expansions possible.
+<suppressed ~151 debug messages>
+
+2.43.13. Executing OPT pass (performing simple optimizations).
+
+2.43.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+<suppressed ~4 debug messages>
+
+2.43.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 30 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Computing hashes of 20 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Computing hashes of 18 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+<suppressed ~29 debug messages>
+Removed a total of 12 cells.
+
+2.43.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.43.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+2.43.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 18 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.43.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.43.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+2.43.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.43.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.43.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.43.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+2.43.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Computing hashes of 18 cells of `\spi_master'.
+Finding duplicate cells in `\spi_master'.
+Removed a total of 0 cells.
+
+2.43.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.43.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+2.43.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+2.43.13.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.43.14. Executing AIGMAP pass (map logic to AIG).
+Module spi_master: replaced 7 cells with 43 new cells, skipped 11 cells.
+  replaced 2 cell types:
+       5 $_MUX_
+       2 $_OR_
+  not replaced 3 cell types:
+       2 $_AND_
+       1 $_NOT_
+       8 $specify2
+
+2.43.15. Executing AIGMAP pass (map logic to AIG).
+Module spi_master: replaced 45 cells with 215 new cells, skipped 120 cells.
+  replaced 3 cell types:
+      14 $_MUX_
+       7 $_ORNOT_
+      24 $_OR_
+  not replaced 8 cell types:
+      17 $_AND_
+      14 $_NOT_
+       3 SB_DFFSR
+      24 SB_DFFESR
+       1 SB_DFFESS
+      28 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000000010101
+      28 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000011001011
+       5 $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1
+
+2.43.15.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.43.15.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.43.15.3. Executing XAIGER backend.
+<suppressed ~39 debug messages>
+Extracted 90 AND gates and 384 wires from module `spi_master' to a netlist network with 40 inputs and 76 outputs.
+
+2.43.15.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+2.43.15.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     40/     76  and =      77  lev =    8 (0.64)  mem = 0.01 MB  box = 61  bb = 56
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f -r 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     40/     76  and =     108  lev =    7 (0.55)  mem = 0.01 MB  ch =   16  box = 61  bb = 56
+ABC: cst =       0  cls =     14  lit =      16  unused =     184  proof =     0
+ABC: + &if -W 250 -v 
+ABC: K = 4. Memory (bytes): Truth =    0. Cut =   64. Obj =  144. Set =  672. CutMin = no
+ABC: Node =     108.  Ch =    14.  Total mem =    0.06 MB. Peak cut mem =    0.01 MB.
+ABC: P:  Del = 2385.00.  Ar =      38.0.  Edge =      127.  Cut =      450.  T =     0.00 sec
+ABC: P:  Del = 2385.00.  Ar =      36.0.  Edge =      123.  Cut =      442.  T =     0.00 sec
+ABC: P:  Del = 2385.00.  Ar =      32.0.  Edge =      109.  Cut =      467.  T =     0.00 sec
+ABC: F:  Del = 2385.00.  Ar =      32.0.  Edge =      109.  Cut =      373.  T =     0.00 sec
+ABC: A:  Del = 2385.00.  Ar =      32.0.  Edge =       91.  Cut =      370.  T =     0.00 sec
+ABC: A:  Del = 2385.00.  Ar =      32.0.  Edge =       91.  Cut =      368.  T =     0.00 sec
+ABC: Total time =     0.00 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: The network is not changed by "&mfs".
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =     40/     76  and =      76  lev =    7 (0.55)  mem = 0.01 MB  box = 61  bb = 56
+ABC: Mapping (K=4)  :  lut =     32  edge =      91  lev =    3 (0.36)  levB =    5  mem = 0.00 MB
+ABC: LUT = 32 : 2=12 37.5 %  3=13 40.6 %  4=7 21.9 %  Ave = 2.84
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &verify 
+ABC: Networks are equivalent.  Time =     0.00 sec
+ABC: + time 
+ABC: elapse: 0.02 seconds, total: 0.02 seconds
+
+2.43.15.6. Executing AIGER frontend.
+<suppressed ~11 debug messages>
+Removed 90 unused cells and 343 unused wires.
+
+2.43.15.7. Executing ABC_OPS_REINTEGRATE pass (reintegrate ABC mapped design into module).
+ABC RESULTS:              $lut cells:       35
+ABC RESULTS:   $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 cells:        5
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:       69
+<suppressed ~232 debug messages>
+Removing temp directory.
+
+2.43.16. Executing TECHMAP pass (map to technology primitives).
+
+2.43.16.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+2.43.16.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+No more expansions possible.
+<suppressed ~11 debug messages>
+
+2.44. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+2.45. Executing TECHMAP pass (map to technology primitives).
+
+2.45.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `$_DFF_N_'.
+Generating RTLIL representation for module `$_DFF_P_'.
+Generating RTLIL representation for module `$_DFFE_NP_'.
+Generating RTLIL representation for module `$_DFFE_PP_'.
+Generating RTLIL representation for module `$_DFF_NP0_'.
+Generating RTLIL representation for module `$_DFF_NP1_'.
+Generating RTLIL representation for module `$_DFF_PP0_'.
+Generating RTLIL representation for module `$_DFF_PP1_'.
+Generating RTLIL representation for module `$_DFFE_NP0P_'.
+Generating RTLIL representation for module `$_DFFE_NP1P_'.
+Generating RTLIL representation for module `$_DFFE_PP0P_'.
+Generating RTLIL representation for module `$_DFFE_PP1P_'.
+Generating RTLIL representation for module `$_SDFF_NP0_'.
+Generating RTLIL representation for module `$_SDFF_NP1_'.
+Generating RTLIL representation for module `$_SDFF_PP0_'.
+Generating RTLIL representation for module `$_SDFF_PP1_'.
+Generating RTLIL representation for module `$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+2.45.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~22 debug messages>
+Removed 17 unused cells and 505 unused wires.
+
+2.46. Executing OPT_LUT pass (optimize LUTs).
+Discovering LUTs.
+Number of LUTs:       40
+  1-LUT                3
+  2-LUT               14
+  3-LUT               16
+  4-LUT                7
+  with \SB_CARRY    (#0)    3
+  with \SB_CARRY    (#1)    3
+
+Eliminating LUTs.
+Number of LUTs:       40
+  1-LUT                3
+  2-LUT               14
+  3-LUT               16
+  4-LUT                7
+  with \SB_CARRY    (#0)    3
+  with \SB_CARRY    (#1)    3
+
+Combining LUTs.
+Number of LUTs:       37
+  1-LUT                3
+  2-LUT               10
+  3-LUT               15
+  4-LUT                9
+  with \SB_CARRY    (#0)    3
+  with \SB_CARRY    (#1)    3
+
+Eliminated 0 LUTs.
+Combined 3 LUTs.
+<suppressed ~143 debug messages>
+
+2.47. Executing TECHMAP pass (map to technology primitives).
+
+2.47.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/cells_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/cells_map.v' to AST representation.
+Generating RTLIL representation for module `$lut'.
+Successfully finished Verilog frontend.
+
+2.47.2. Continuing TECHMAP pass.
+Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0010 for cells of type $lut.
+Using template $paramod$9d707d218adbd63b6f9a0c79d7ee037306fb6296$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1011 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1110 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11110111 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11001010 for cells of type $lut.
+Using template $paramod$a5516fc31d1e552de2435200bb732b4d4ad63a9c$lut for cells of type $lut.
+Using template $paramod$f9813472aa48e533b3838c6f2316dc2e78c66111$lut for cells of type $lut.
+Using template $paramod$3e4fd704b1bf4779d95ae5c8e67ee17965fd3cf7$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0111 for cells of type $lut.
+Using template $paramod$8e3e9a427b2bc0e7d837447fde19028feb6ec6fc$lut for cells of type $lut.
+Using template $paramod$79b0a1936afde10c31186b63f39698d9b41269bf$lut for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11010101 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11010000 for cells of type $lut.
+Using template $paramod$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$39fecdaa624309b39c1f847c4e14205177fabf73$lut for cells of type $lut.
+Using template $paramod$afbb78ea2f898aa3cffa65de18f43b6b53d33ce1$lut for cells of type $lut.
+No more expansions possible.
+<suppressed ~339 debug messages>
+Removed 0 unused cells and 80 unused wires.
+
+2.48. Executing AUTONAME pass.
+Renamed 103 objects in module spi_master (29 iterations).
+<suppressed ~103 debug messages>
+
+2.49. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `spi_master'. Setting top module to spi_master.
+
+2.49.1. Analyzing design hierarchy..
+Top module:  \spi_master
+
+2.49.2. Analyzing design hierarchy..
+Top module:  \spi_master
+Removed 0 unused modules.
+
+2.50. Printing statistics.
+
+=== spi_master ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       51 wires
+      103 wire bits
+       51 public wires
+      103 public wire bits
+       11 ports
+       25 port bits
+       68 submodules
+        3   SB_CARRY
+       24   SB_DFFESR
+        1   SB_DFFESS
+        3   SB_DFFSR
+       37   SB_LUT4
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+        - spi_master
+
+        +----------Count including submodules.
+        | 
+       51 wires
+      103 wire bits
+       51 public wires
+      103 public wire bits
+       11 ports
+       25 port bits
+        - memories
+        - memory bits
+        - processes
+        - cells
+       68 submodules
+        3   SB_CARRY
+       24   SB_DFFESR
+        1   SB_DFFESS
+        3   SB_DFFSR
+       37   SB_LUT4
+
+2.51. Executing CHECK pass (checking for obvious problems).
+Checking module spi_master...
+Found and reported 0 problems.
+
+2.52. Executing JSON backend.
+
+3. Printing statistics.
+
+=== spi_master ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       51 wires
+      103 wire bits
+       51 public wires
+      103 public wire bits
+       11 ports
+       25 port bits
+       68 cells
+        3   SB_CARRY
+       24   SB_DFFESR
+        1   SB_DFFESS
+        3   SB_DFFSR
+       37   SB_LUT4
+
+End of script. Logfile hash: c92e2c9bcf, time: 0.81s, user: 0.61s, system: 0.12s, MEM: 25.98 MB peak
+Yosys 0.67+post (git sha1 22c15a7ecd53437f18f67c72572bd693f78357ca, GNU /usr/bin/g++ 16.1.1)
+Time spent: 61% 21x read_verilog (0 sec), 8% 1x abc9_exe (0 sec), ...
