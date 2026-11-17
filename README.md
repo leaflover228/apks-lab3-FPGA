@@ -5,7 +5,7 @@ SPI master, mode 0 (CPOL=0, CPHA=0), MSB first, 8 bit, configurable SCK divider.
 ## Structure
 - `rtl/spi_master.v`: synthesizable design
 - `tb/spi_master_tb.v`: self-checking testbench with behavioural slave
-- `docs/`: FSM diagram, waveform screenshots, synthesis reports
+- `docs/`: FSM diagram, waveform screenshots, synthesis reports and etc
 - `Makefile`: `make sim`, `make wave`, `make report`, `make clean`
 
 ## Ports
